@@ -1,0 +1,45 @@
+@use 'colors' as color;
+
+header {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1200px;
+        margin-top: 12px;
+
+        ul {
+            list-style: none;
+            font-size: .8rem;
+            display: flex;
+            align-items: center;
+            gap: 44px;
+
+            a {
+                transition-duration: .3s;
+
+                &:hover {
+                    color: color.$accent;
+                }
+            }
+        }
+
+        button {
+            width: 48px;
+            height: 48px;
+            border: 1px solid color.$dimmed-text;
+            background-color: transparent;
+            border-radius: 50%;
+            cursor: pointer;
+
+            .bi-search {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

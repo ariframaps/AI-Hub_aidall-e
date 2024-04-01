@@ -1,1 +1,58 @@
-/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+header {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  margin-top: 12px;
+}
+header nav ul {
+  list-style: none;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+header nav ul a {
+  transition-duration: 0.3s;
+}
+header nav ul a:hover {
+  color: #abecd6;
+}
+header nav button {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #35383c;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+header nav button .bi-search {
+  font-size: 1.1rem;
+}
+
+:root {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #13161b;
+  height: 300vh;
+}/*# sourceMappingURL=main.css.map */
