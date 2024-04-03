@@ -1,5 +1,7 @@
 @use 'module/colors' as color;
 @use 'module/header';
+@use 'module/hero';
+
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 :root {
@@ -20,4 +22,13 @@
 body {
     background-color: color.$background;
     height: 300vh;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 1200px;
 }

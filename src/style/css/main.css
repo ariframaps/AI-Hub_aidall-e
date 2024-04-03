@@ -37,6 +37,16 @@ header nav button .bi-search {
   font-size: 1.1rem;
 }
 
+.hero-container {
+  background-color: rgb(110, 68, 75);
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.hero-container .hero-title sub {
+  color: #f4edba;
+}
+
 :root {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-optical-sizing: auto;
@@ -55,4 +65,13 @@ header nav button .bi-search {
 body {
   background-color: #13161b;
   height: 300vh;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 1200px;
 }/*# sourceMappingURL=main.css.map */
