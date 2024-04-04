@@ -26,38 +26,74 @@
         }
 
         form {
-            background-image: linear-gradient(to top, transparent, rgba(color.$dimmed-text, .5));
-            box-shadow: 0 3px 6px rgba(0, 0, 0, .5);
-            width: 680px;
-            padding: 10px 15px;
-            border-radius: 60px;
+            position: relative;
             display: flex;
+            justify-content: center;
             align-items: center;
+            border-radius: 61px;
+            padding: 1px;
+            overflow: hidden;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, .5);
 
-            i {
-                font-size: 30px;
-                color: color.$accent;
-                padding-inline: 30px;
+            &::before {
+                content: "";
+                position: absolute;
+                height: 90px;
+                width: 90px;
+                border-radius: 50%;
+                left: -35px;
+                right: 610px;
+                top: -35px;
+                transform: rotate(0deg);
+                background: linear-gradient(to right, transparent, transparent, rgba(255, 255, 255, .3), rgba(255, 255, 255, .6), rgba(color.$accent, .8), color.$accent, white);
+                animation: rotate 3.5s linear infinite;
             }
 
-            input {
-                outline: none;
-                background: transparent;
-                border: none;
-                color: color.$text;
-                font-family: inherit;
-                font-size: .9rem;
-                flex: 1;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 1px;
+                bottom: 1px;
+                right: 1px;
+                left: 1px;
+                border-radius: 60px;
+                background-color: color.$background;
             }
 
-            button {
-                background-color: rgba(color.$text, $alpha: .15);
-                border: none;
-                padding: 10px 20px;
-                border-radius: 25px;
-                font-family: inherit;
-                font-size: .8rem;
-                font-weight: bolder;
+            .input-container {
+                background-image: linear-gradient(to top, transparent, rgba(color.$dimmed-text, .5));
+                width: 680px;
+                padding: 10px 15px;
+                border-radius: 60px;
+                display: flex;
+                display: relative;
+                z-index: 2;
+
+                i {
+                    font-size: 30px;
+                    color: color.$accent;
+                    padding-inline: 30px;
+                }
+
+                input {
+                    outline: none;
+                    background: transparent;
+                    border: none;
+                    color: color.$text;
+                    font-family: inherit;
+                    font-size: .9rem;
+                    flex: 1;
+                }
+
+                button {
+                    background-color: rgba(color.$text, $alpha: .15);
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 25px;
+                    font-family: inherit;
+                    font-size: .8rem;
+                    font-weight: bolder;
+                }
             }
         }
     }
@@ -72,5 +108,69 @@
         img.l1 {
             transform: translateY(100px);
         }
+    }
+}
+
+.hero-topDivider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 18vh;
+    background-image: linear-gradient(to bottom, color.$background, rgba(color.$background, .8), rgba(color.$background, .6), rgba(color.$background, .3), transparent);
+    z-index: 1;
+}
+
+.bi-triangle-fill {
+    color: color.$accent;
+    font-size: 35px;
+    position: absolute;
+    top: 20vh;
+}
+
+.hero-bottomDivider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 18vh;
+    background-image: linear-gradient(to top, color.$background, rgba(color.$background, .8), rgba(color.$background, .6), rgba(color.$background, .3), transparent);
+    z-index: 1;
+}
+
+@keyframes rotate {
+    0% {
+        left: -35px;
+        right: 610px;
+        top: -35px;
+        transform: rotate(0deg);
+    }
+
+    47% {
+        left: 635px;
+        right: -35px;
+        top: -35px;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        left: 635px;
+        right: -35px;
+        top: 35px;
+        transform: rotate(180deg);
+    }
+
+    93% {
+        left: -35px;
+        right: 610px;
+        top: 35px;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        left: -35px;
+        right: 610px;
+        top: -35px;
+        transform: rotate(360deg);
     }
 }

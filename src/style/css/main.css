@@ -60,20 +60,53 @@ header nav button .bi-search {
   margin-bottom: 30px;
 }
 .hero-container .hero-content form {
-  background-image: linear-gradient(to top, transparent, rgba(53, 56, 60, 0.5));
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 61px;
+  padding: 1px;
+  overflow: hidden;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+.hero-container .hero-content form::before {
+  content: "";
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  left: -35px;
+  right: 610px;
+  top: -35px;
+  transform: rotate(0deg);
+  background: linear-gradient(to right, transparent, transparent, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(171, 236, 214, 0.8), #abecd6, white);
+  animation: rotate 3.5s linear infinite;
+}
+.hero-container .hero-content form::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  right: 1px;
+  left: 1px;
+  border-radius: 60px;
+  background-color: #13161b;
+}
+.hero-container .hero-content form .input-container {
+  background-image: linear-gradient(to top, transparent, rgba(53, 56, 60, 0.5));
   width: 680px;
   padding: 10px 15px;
   border-radius: 60px;
   display: flex;
-  align-items: center;
+  display: relative;
+  z-index: 2;
 }
-.hero-container .hero-content form i {
+.hero-container .hero-content form .input-container i {
   font-size: 30px;
   color: #abecd6;
   padding-inline: 30px;
 }
-.hero-container .hero-content form input {
+.hero-container .hero-content form .input-container input {
   outline: none;
   background: transparent;
   border: none;
@@ -82,7 +115,7 @@ header nav button .bi-search {
   font-size: 0.9rem;
   flex: 1;
 }
-.hero-container .hero-content form button {
+.hero-container .hero-content form .input-container button {
   background-color: rgba(157, 164, 164, 0.15);
   border: none;
   padding: 10px 20px;
@@ -102,6 +135,65 @@ header nav button .bi-search {
   transform: translateY(100px);
 }
 
+.hero-topDivider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 18vh;
+  background-image: linear-gradient(to bottom, #13161b, rgba(19, 22, 27, 0.8), rgba(19, 22, 27, 0.6), rgba(19, 22, 27, 0.3), transparent);
+  z-index: 1;
+}
+
+.bi-triangle-fill {
+  color: #abecd6;
+  font-size: 35px;
+  position: absolute;
+  top: 20vh;
+}
+
+.hero-bottomDivider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 18vh;
+  background-image: linear-gradient(to top, #13161b, rgba(19, 22, 27, 0.8), rgba(19, 22, 27, 0.6), rgba(19, 22, 27, 0.3), transparent);
+  z-index: 1;
+}
+
+@keyframes rotate {
+  0% {
+    left: -35px;
+    right: 610px;
+    top: -35px;
+    transform: rotate(0deg);
+  }
+  47% {
+    left: 635px;
+    right: -35px;
+    top: -35px;
+    transform: rotate(0deg);
+  }
+  50% {
+    left: 635px;
+    right: -35px;
+    top: 35px;
+    transform: rotate(180deg);
+  }
+  93% {
+    left: -35px;
+    right: 610px;
+    top: 35px;
+    transform: rotate(180deg);
+  }
+  100% {
+    left: -35px;
+    right: 610px;
+    top: -35px;
+    transform: rotate(360deg);
+  }
+}
 :root {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-optical-sizing: auto;
