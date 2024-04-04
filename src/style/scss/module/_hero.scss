@@ -93,6 +93,12 @@
                     font-family: inherit;
                     font-size: .8rem;
                     font-weight: bolder;
+                    transform: scale(1);
+                    transition: ease-out .3s;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
                 }
             }
         }
