@@ -3,6 +3,7 @@ header {
   display: flex;
   justify-content: center;
   position: fixed;
+  z-index: 999;
   width: 100%;
 }
 header nav {
@@ -38,20 +39,74 @@ header nav button .bi-search {
 }
 
 .hero-container {
-  background-color: rgb(110, 68, 75);
   display: flex;
   align-items: center;
   height: 100vh;
 }
-.hero-container .hero-title sub {
+.hero-container .hero-content sub {
   color: #f4edba;
+  background-color: rgba(244, 237, 186, 0.1);
+  padding: 10px 25px;
+  border-radius: 25px;
+}
+.hero-container .hero-content h1 {
+  font-size: 5rem;
+  line-height: 5.2rem;
+  margin-block: 40px 30px;
+}
+.hero-container .hero-content p {
+  color: #9da4a4;
+  line-height: 1.7rem;
+  margin-bottom: 30px;
+}
+.hero-container .hero-content form {
+  background-image: linear-gradient(to top, transparent, rgba(53, 56, 60, 0.5));
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+  width: 680px;
+  padding: 10px 15px;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+}
+.hero-container .hero-content form i {
+  font-size: 30px;
+  color: #abecd6;
+  padding-inline: 30px;
+}
+.hero-container .hero-content form input {
+  outline: none;
+  background: transparent;
+  border: none;
+  color: #9da4a4;
+  font-family: inherit;
+  font-size: 0.9rem;
+  flex: 1;
+}
+.hero-container .hero-content form button {
+  background-color: rgba(157, 164, 164, 0.15);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: bolder;
+}
+.hero-container .hero-parallaxbg {
+  position: absolute;
+  right: 0;
+  transform: rotate(-20deg);
+  display: flex;
+  gap: 70px;
+}
+.hero-container .hero-parallaxbg img.l1 {
+  transform: translateY(100px);
 }
 
 :root {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 * {
@@ -70,6 +125,8 @@ body {
 .section {
   display: flex;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .container {

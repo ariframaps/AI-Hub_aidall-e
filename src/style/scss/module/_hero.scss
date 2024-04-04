@@ -1,7 +1,6 @@
 @use 'colors' as color;
 
 .hero-container {
-    background-color: rgb(110, 68, 75);
     display: flex;
     align-items: center;
     height: 100vh;
@@ -9,6 +8,69 @@
     .hero-content {
         sub {
             color: color.$accent2;
+            background-color: rgba(color.$accent2, $alpha: .1);
+            padding: 10px 25px;
+            border-radius: 25px;
+        }
+
+        h1 {
+            font-size: 5rem;
+            line-height: 5.2rem;
+            margin-block: 40px 30px;
+        }
+
+        p {
+            color: color.$text;
+            line-height: 1.7rem;
+            margin-bottom: 30px;
+        }
+
+        form {
+            background-image: linear-gradient(to top, transparent, rgba(color.$dimmed-text, .5));
+            box-shadow: 0 3px 6px rgba(0, 0, 0, .5);
+            width: 680px;
+            padding: 10px 15px;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+
+            i {
+                font-size: 30px;
+                color: color.$accent;
+                padding-inline: 30px;
+            }
+
+            input {
+                outline: none;
+                background: transparent;
+                border: none;
+                color: color.$text;
+                font-family: inherit;
+                font-size: .9rem;
+                flex: 1;
+            }
+
+            button {
+                background-color: rgba(color.$text, $alpha: .15);
+                border: none;
+                padding: 10px 20px;
+                border-radius: 25px;
+                font-family: inherit;
+                font-size: .8rem;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .hero-parallaxbg {
+        position: absolute;
+        right: 0;
+        transform: rotate(-20deg);
+        display: flex;
+        gap: 70px;
+
+        img.l1 {
+            transform: translateY(100px);
         }
     }
 }
