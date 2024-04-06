@@ -111,8 +111,16 @@
         display: flex;
         gap: 70px;
 
-        img.l1 {
-            transform: translateY(100px);
+        img {
+            transition-duration: .05s;
+
+            &.l1 {
+                transform: translateY(100px);
+            }
+
+            &.r1 {
+                transform: translateY(0px);
+            }
         }
     }
 }

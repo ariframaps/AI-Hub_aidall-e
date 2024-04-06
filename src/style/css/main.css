@@ -3,7 +3,7 @@ header {
   display: flex;
   justify-content: center;
   position: fixed;
-  z-index: 999;
+  z-index: 998;
   width: 100%;
 }
 header nav {
@@ -36,6 +36,44 @@ header nav button {
 }
 header nav button .bi-search {
   font-size: 1.1rem;
+}
+header .search-form {
+  position: fixed;
+  top: 0vh;
+  z-index: 999;
+  background-color: #191d27;
+  left: 0;
+  right: 0;
+  height: 38vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .search-form form {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid white;
+}
+header .search-form form input {
+  flex: 1;
+  font-size: 4rem;
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 3px;
+}
+header .search-form form i {
+  font-size: 2rem;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(157, 164, 164, 0.1);
 }
 
 .hero-container {
@@ -136,8 +174,14 @@ header nav button .bi-search {
   display: flex;
   gap: 70px;
 }
+.hero-container .hero-parallaxbg img {
+  transition-duration: 0.05s;
+}
 .hero-container .hero-parallaxbg img.l1 {
   transform: translateY(100px);
+}
+.hero-container .hero-parallaxbg img.r1 {
+  transform: translateY(0px);
 }
 
 .hero-topDivider {

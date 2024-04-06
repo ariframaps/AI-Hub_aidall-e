@@ -4,7 +4,7 @@ header {
     display: flex;
     justify-content: center;
     position: fixed;
-    z-index: 999;
+    z-index: 998;
     width: 100%;
 
     nav {
@@ -40,6 +40,48 @@ header {
 
             .bi-search {
                 font-size: 1.1rem;
+            }
+        }
+    }
+
+    .search-form {
+        position: fixed;
+        top: 0vh;
+        z-index: 999;
+        background-color: color.$seconddaryBackground;
+        left: 0;
+        right: 0;
+        height: 38vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        form {
+            width: 1200px;
+            display: flex;
+            align-items: center;
+            border-bottom: 3px solid color.$white;
+
+            input {
+                flex: 1;
+                font-size: 4rem;
+                background: none;
+                border: none;
+                color: color.$white;
+                outline: none;
+                padding: 3px;
+            }
+
+            i {
+                font-size: 2rem;
+                width: 55px;
+                height: 55px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background-color: rgba(color.$text, $alpha: .1);
             }
         }
     }
