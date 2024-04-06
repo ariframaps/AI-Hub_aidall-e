@@ -1,4 +1,19 @@
 
+// search input
+const searchForm = document.querySelector('.search-form');
+const showSearchForm = document.querySelector('.search-btn');
+const closeSearchForm = document.querySelector('.bi-x');
+// console.log(showSearchForm)
+
+showSearchForm.addEventListener('click', () => {
+    // alert('show form')
+    searchForm.style.top = '0vh';
+})
+closeSearchForm.addEventListener('click', () => {
+    // alert('hide form')
+    searchForm.style.top = '-38vh';
+})
+
 // hero-mouse tracker
 document.addEventListener("mousemove", function (event) {
     var follower = document.querySelector(".bi-triangle-fill");

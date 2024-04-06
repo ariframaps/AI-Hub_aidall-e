@@ -46,7 +46,7 @@ header {
 
     .search-form {
         position: fixed;
-        top: 0vh;
+        top: -38vh;
         z-index: 999;
         background-color: color.$seconddaryBackground;
         left: 0;
@@ -55,6 +55,7 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        transition-duration: .3s;
 
         form {
             width: 1200px;

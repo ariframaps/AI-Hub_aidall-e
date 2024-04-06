@@ -39,7 +39,7 @@ header nav button .bi-search {
 }
 header .search-form {
   position: fixed;
-  top: 0vh;
+  top: -38vh;
   z-index: 999;
   background-color: #191d27;
   left: 0;
@@ -48,6 +48,7 @@ header .search-form {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-duration: 0.3s;
 }
 header .search-form form {
   width: 1200px;
