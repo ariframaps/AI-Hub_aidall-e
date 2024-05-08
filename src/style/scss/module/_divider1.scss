@@ -1,0 +1,23 @@
+@use 'colors' as color;
+
+.divider1 {
+    display: flex;
+    flex-direction: column;
+
+    .subtitle {
+        text-align: center;
+        font-size: .7rem;
+        margin-block: 44px;
+        color: color.$text;
+    }
+
+    .divider1-container {
+        display: flex;
+        gap: 120px;
+
+        img {
+            max-height: 47px;
+            width: fit-content;
+        }
+    }
+}
